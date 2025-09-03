@@ -7,19 +7,19 @@ import {
   BsTiktok,
   BsWhatsapp,
 } from "react-icons/bs";
-import { FaLocationDot } from "react-icons/fa6";
+import { FaLocationDot, FaTiktok } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <div className="bg-gray-50 pt-4 pb-3 flex flex-col gap-5 w-full lg:px-28 md:px-6 xl:px-32 2xl:px-30 bottom-0 px-4">
-      <div className="flex flex-col sm:flex-row gap-4 md:gap-20">
+    <div className="bg-primary-75 pt-4 pb-3 flex flex-col gap-5 w-full lg:px-28 md:px-6 xl:px-32 2xl:px-30 bottom-0 px-4 items-center text-center sm:text-left">
+      <div className="flex flex-col sm:flex-row-reverse gap-6 md:gap-20">
         {/* Contact */}
         <div className="flex flex-col gap-3">
-          <h5 className="font-family-heading font-medium text-lg sm:text-xl">
+          <h5 className="font-family-heading font-bold text-lg sm:text-xl">
             Contact
           </h5>
-          <div className="flex flex-col gap-3 sm:gap-4 font-family-body">
+          <div className="flex flex-col gap-3 sm:gap-4 font-family-body items-center sm:items-baseline">
             <div className="flex gap-2">
               <BsPhone className="w-5 h-5" />
               <a href="tel:+254793 965 155">
@@ -49,7 +49,7 @@ function Footer() {
         </div>
         {/* Open Hours */}
         <div className="flex flex-col gap-2 sm:gap-4">
-          <h5 className="font-family-heading font-medium text-xl">
+          <h5 className="font-family-heading font-bold text-lg sm:text-xl">
             Open Hours
           </h5>
           <div className="flex flex-col gap-2 sm:gap-4 font-family-body">
@@ -59,10 +59,10 @@ function Footer() {
             <p>Public Holidays (6:30 am - 3:00 pm)</p>
           </div>
         </div>
-        
+
         {/* Explore */}
         <div className="flex flex-col gap-2 ">
-          <h5 className="font-family-heading font-medium text-lg sm:text-xl">
+          <h5 className="font-family-heading font-bold text-lg sm:text-xl">
             Explore
           </h5>
           <div className="flex flex-col gap-2 font-family-body">
@@ -85,8 +85,8 @@ function Footer() {
         </div>
 
         {/* Logo & Socials */}
-        <div className=" flex flex-col gap-6 md">
-          <div className="flex flex-col gap-2">
+        <div className=" flex flex-col gap-6 md items-center sm:items-baseline">
+          <div className="flex flex-col gap-2 items-center sm:items-baseline">
             <img
               src={FooterLogo}
               alt="Giant Golem Logo black"
@@ -100,25 +100,25 @@ function Footer() {
               href="https://www.instagram.com/giantgolemstrength/"
               target="_blank"
             >
-              <BsInstagram className="h-6 w-6" />
+              <BsInstagram className="h-6 w-6 text-[#e1306c] hover:text-black" />
             </a>
             <a
               href="https://www.tiktok.com/@giantgolemstrengthfitnes"
               target="_blank"
             >
-              <BsTiktok className="h-6 w-6" />
+              <BsTiktok className="h-6 w-6 text-[#ff0050] hover:text-black" />
             </a>
             <a
               href="https://facebook.com/giantgolemstrengthfitness/"
               target="_blank"
             >
-              <BsFacebook className="h-6 w-6" />
+              <BsFacebook className="h-6 w-6 text-blue-600 hover:text-black" />
             </a>
             <a
               href="https://wa.me/+254793965155?text=Hello.%20I%20got%20your%20number%20from%20your%20awesome%20website%20and%20I'm%20interesting%20in%20joining%20your%20gym.%20Kindly%20give%20me%20directions,%20I%20would%20like%20to%20visit%20tomorrow?"
               target="_blank"
             >
-              <BsWhatsapp className="h-6 w-6" />
+              <BsWhatsapp className="h-6 w-6 text-green-500 hover:text-black" />
             </a>
           </div>
         </div>

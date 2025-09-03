@@ -1,8 +1,14 @@
 import { createContext, useContext, useState } from "react";
 
-const HeaderContext = createContext();
+const HeaderContext = createContext({
+  title: "",
+  setTitle: () => {},
+  description: "",
+  setDescription: () => {},
+  image: "",
+  setImage: () => {},
+});
 
-
-export const HeaderContextProvider = HeaderContext.Provider;
+export const HeaderProvider = HeaderContext.Provider;
 
 export const useHeader = () => useContext(HeaderContext);

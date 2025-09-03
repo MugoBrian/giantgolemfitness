@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
-// import Layout from "./Layout";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import { HeaderContextProvider } from "./context/useHeaderContext";
+
+import { HeaderProvider } from "./context/useHeaderContext";
 import HomeHero from "./assets/images/HomeHero.png";
+import Layout from "./Layout";
 
 function App() {
   const [title, setTitle] = useState("");
@@ -12,13 +10,11 @@ function App() {
   const [image, setImage] = useState(HomeHero);
 
   return (
-    <HeaderContextProvider
+    <HeaderProvider
       value={{ title, setTitle, description, setDescription, image, setImage }}
     >
-      <Header />
-      <Outlet />
-      <Footer />
-    </HeaderContextProvider>
+      <Layout />
+    </HeaderProvider>
   );
 }
 

@@ -48,9 +48,7 @@ function Navbar() {
   return (
     // Dependency array: re-run if 'scrolled' changes
 
-    <nav
-      className={`${navbarClasses} py-4 relative w-full scroll-smooth px-4`}
-    >
+    <nav className={`${navbarClasses} py-4 relative w-fit scroll-smooth px-4`}>
       <div className="flex md:gap-8 justify-between items-center lg:justify-center ">
         <Link to="/">
           <img
@@ -61,7 +59,7 @@ function Navbar() {
             alt="Giant Golem Fitness Logo"
           />
         </Link>
-        <ul className="hidden lg:flex font-family-body bg-primary-75 gap-16 px-5 py-4 rounded-sm items-center align-middle justify-center h-14 text-black">
+        <ul className="hidden lg:flex font-family-body bg-primary gap-16 px-5 py-4 rounded-sm items-center align-middle justify-center h-14 text-black">
           {navItems.map((item, index) => (
             <NavLink
               key={index}
@@ -93,7 +91,7 @@ function Navbar() {
           ></div>
         )}
         <div
-          className={`md:hidden fixed z-40 inset-y-0 right-0 w-60 top-0 shadow-2xl bg-primary-75 transform transition-transform duration-500 ${
+          className={`md:hidden fixed z-40 inset-y-0 right-0 w-60 top-0 shadow-2xl bg-primary-95 transform transition-transform duration-500 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
@@ -121,7 +119,7 @@ function Navbar() {
               </NavLink>
             ))}
             <div className="bottom-0 absolute bg-white-50 w-full px-1 py-0.5">
-              <p className="font-family-body font-medium text-xs underline cursor-pointer">
+              <p className="font-family-body font-medium text-xs underline cursor-pointer rounded-tl-5xl rounded-tr-5xl">
                 {" "}
                 <a href="https://www.linkedin.com/in/brianmuchirimugo">
                   &copy; Made by Konsyda Designs

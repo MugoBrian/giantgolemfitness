@@ -1,17 +1,21 @@
 import { useHeader } from "../context/useHeaderContext";
 import HomeHero from "../assets/images/HomeHero.png";
 import { useEffect } from "react";
-import { BsArrowUpRightCircle, BsPeople, BsPerson } from "react-icons/bs";
-import { Link } from "react-router-dom";
-import { IoBarbell, IoBarbellOutline, IoBarbellSharp } from "react-icons/io5";
-import SportsHeartIcon from "../assets/images/sport-heart-icon.svg";
-import { CgCommunity } from "react-icons/cg";
 import {
-  RiCommunityFill,
-  RiUserCommunityFill,
-  RiUserCommunityLine,
-} from "react-icons/ri";
+  BsArrowUpRight,
+  BsArrowUpRightCircle,
+  BsCalendar4,
+  BsPeople,
+} from "react-icons/bs";
+import { Link } from "react-router-dom";
+import SportsHeartIcon from "../assets/images/sport-heart-icon.svg";
+import ProgramImage from "../assets/images/Image.png";
+import KarateImage from "../assets/images/Karate.png";
+import ZumbaImage from "../assets/images/Zumba.png";
 import { PiBarbell } from "react-icons/pi";
+import { BiCheck } from "react-icons/bi";
+import { SectionHeader, TestimonialsCarousel, Contact } from "../components";
+import { PenBoxIcon } from "lucide-react";
 function Home() {
   const { setImage, setDescription, setTitle } = useHeader();
 
@@ -40,8 +44,8 @@ function Home() {
           </h5>
         </div>
         {/* CTA */}
-        <div className="flex gap-5 sm:gap-8 md:gap-12 ">
-          <button className="bg-primary font-medium text-white rounded-full px-2 py-2 cursor-pointer">
+        <div className="flex gap-6 sm:gap-12 md:gap-16 ">
+          <button className="bg-primary font-medium text-white rounded-full px-3 py-3 sm:px-5 sm:py-4 cursor-pointer">
             {" "}
             Start Your Journey
           </button>
@@ -49,7 +53,7 @@ function Home() {
             <Link to={"/programs"}>
               <h6 className="underline sm:text-lg">Explore Programs</h6>
             </Link>
-            <BsArrowUpRightCircle className="h-4 w-4" />
+            <BsArrowUpRightCircle className="h-4.5 w-4.5" />
           </div>
         </div>
       </div>
@@ -109,7 +113,7 @@ function Home() {
           {/* Benefits */}
           <div className="flex flex-col sm:flex-row gap-6">
             <div className="flex flex-col gap-6 items-center border border-gray-500 rounded-lg p-3">
-              <img src={SportsHeartIcon} className="w-8 h-8 stroke-40" />
+              <img src={SportsHeartIcon} className="w-8 h-8" />
               <p className="font-semibold font-family-heading text-md sm:text-lg">
                 Expert Coaching
               </p>
@@ -143,25 +147,329 @@ function Home() {
       </div>
 
       {/* Programs Section */}
-      <div className="bg-white h-128 flex justify-center">
+      <div className="bg-white text-center px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
         {/* Title & Subtitle Section */}
-        <div>
-          <div>
-            <hr className="h-1 text-primary w-40" />
+        <SectionHeader
+          heading="Our Programs"
+          subheading="Fitness programs and expert-led sessions designed to help our
+              memebers achieve their fitness goals"
+        />
+        {/* See More */}
+        <div className="flex justify-end gap-2 items-center mt-9 w-full">
+          <div className="w-1/2 sm:w-fit">
+            <button className="rounded-full sm:w-auto w-full font-family-heading bg-primary-75 p-3 font-medium">
+              See More
+            </button>
           </div>
           <div>
-            <p className="">
-              Fitness programs and expert-led sessions designed to help our
-              memebers achieve their fitness goals{" "}
-            cal </p>
+            <button className="rounded-full bg-primary-75 p-2.5">
+              <BsArrowUpRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
+
         {/* Programs Card Section */}
-        <div>
-          {/* Programs Card */}
-          <div></div>
+        <div className="mt-9 grid grid-cols-1 justify-center items-center md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-6 mb-14">
+          <div className="rounded-xl flex flex-col shadow-primary w-full lg:flex-1 h-full">
+            {/* Image */}
+            <img
+              src={ProgramImage}
+              alt="A martial arts master on his knees"
+              className="h-full w-full"
+            />
+
+            {/* Description */}
+            <div className="flex flex-col gap-3 mx-4 mb-4 lg:flex-1">
+              <div className="flex gap-3 items-center justify-between">
+                <div>
+                  <p className="font-family-heading font-bold">BODY BUILDING</p>
+                </div>
+                <div className="flex justify-end">
+                  <p className="px-2.5 py-2 text-sm rounded-full bg-primary-25">
+                    {" "}
+                    60 - 90 min
+                  </p>
+                </div>
+              </div>
+              <p className="font-family-body text-left">
+                Progressively overload focused program for maximum muscle
+                hypertrophy.
+              </p>
+
+              <div className="flex flex-col mt-3 gap-6 md:gap-0 md:flex-row justify-between items-center">
+                <div className="flex gap-2 items-center justify-start w-full md:w-fit">
+                  <BsCalendar4 className="w-4 h-4" />
+                  <p className="font-family-body">Mon - Sat</p>
+                </div>
+                <div className="bg-primary-75 rounded-full w-full md:w-fit">
+                  <button className="text-sm sm:text-md font-family-heading rounded-3xl px-3 py-2.5">
+                    Contact Trainer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl flex flex-col shadow-primary w-full lg:flex-1 h-full">
+            {/* Image */}
+            <img
+              src={ZumbaImage}
+              alt="A martial arts master on his knees"
+              className="h-full w-full"
+            />
+
+            {/* Description */}
+            <div className="flex flex-col gap-3 mx-4 mb-4 lg:flex-1">
+              <div className="flex gap-3 items-center justify-between">
+                <div>
+                  <p className="font-family-heading font-bold">ZUMBA</p>
+                </div>
+                <div className="flex justify-end">
+                  <p className="px-2.5 py-2 text-sm rounded-full bg-primary-25">
+                    {" "}
+                    60 min
+                  </p>
+                </div>
+              </div>
+              <p className="font-family-body text-left">
+                Group fitness program that combines dance rhythms with
+                high-energy cardio moves.
+              </p>
+
+              <div className="flex flex-col mt-3 gap-6 md:gap-0 md:flex-row justify-between items-center">
+                <div className="flex gap-2 items-center justify-start w-full md:w-fit">
+                  <BsCalendar4 className="w-4 h-4" />
+                  <p className="font-family-body">Tue</p>
+                </div>
+                <div className="bg-primary-75 rounded-full w-full md:w-fit">
+                  <button className="text-sm sm:text-md font-family-heading rounded-3xl px-3 py-2.5">
+                    Contact Trainer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="rounded-xl flex flex-col shadow-primary w-full lg:flex-1 h-full">
+            {/* Image */}
+            <img
+              src={KarateImage}
+              alt="A martial arts master on his knees"
+              className="h-full w-full"
+            />
+
+            {/* Description */}
+            <div className="flex flex-col gap-3 mx-4 mb-4 lg:flex-1">
+              <div className="flex gap-3 items-center justify-between">
+                <div>
+                  <p className="font-family-heading font-bold">KARATE</p>
+                </div>
+                <div className="flex justify-end">
+                  <p className="px-2.5 py-2 text-sm rounded-full bg-primary-25">
+                    {" "}
+                    60 min
+                  </p>
+                </div>
+              </div>
+              <p className="font-family-body text-left">
+                Acquire defense and attack skills, master Karate the traditional
+                way.
+              </p>
+
+              <div className="flex flex-col mt-3 gap-6 md:gap-0 md:flex-row justify-between items-center">
+                <div className="flex gap-2 items-center justify-start w-full md:w-fit">
+                  <BsCalendar4 className="w-4 h-4" />
+                  <p className="font-family-body">Mon - Sat</p>
+                </div>
+                <div className="bg-primary-75 rounded-full w-full md:w-fit">
+                  <button className="text-sm sm:text-md font-family-heading rounded-3xl px-3 py-2.5">
+                    Contact Trainer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* Membership Section */}
+      <div className="flex-col gap-6 bg-gray-400 pb-12 text-center pt- px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
+        {/* Title & Subtitle Section */}
+        <SectionHeader
+          heading="Membership"
+          subheading="Choose the perfect plan that fits your fitness journey and goals."
+        />
+        {/* Membership Card */}
+        <div className="grid grid-cols-1 pt-12 md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-8 justify-center w-full">
+          {/* Daily */}
+          <div className="bg-white p-8 gap-6 rounded-2xl md:w-auto">
+            {/* Frequency */}
+            <div className="flex flex-col gap-4">
+              <h4 className="font-semibold text-2xl font-family-heading text-center">
+                Daily
+              </h4>
+              {/* Price */}
+
+              <div className="flex flex-row items-center justify-center gap-0.5">
+                <div className="text-3xl flex flex-row">
+                  <p className="align-super text-sm font-family-body font-bold pr-0.5">
+                    KES
+                  </p>
+                  <p className="text-4xl font-family-body font-semibold">
+                    {" "}
+                    200
+                  </p>
+                </div>
+                <p className="font-family-body text-base text-black pl-0.5">
+                  {" "}
+                  / per session
+                </p>
+              </div>
+
+              {/* Features */}
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Access to equipments</p>
+                </div>
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Popular with new members</p>
+                </div>
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Personalized sessions</p>
+                </div>
+              </div>
+              {/* CTA */}
+              <div className="w-full flex flex-row gap-6 justify-between items-center">
+                <p className="underline text-gray-300">Learn More</p>
+                <button className="px-3 py-2 rounded-full text-white bg-black text-center">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Weekly */}
+          <div className="bg-white p-8 gap-6 rounded-2xl w-full">
+            {/* Frequency */}
+            <div className="flex flex-col gap-4">
+              <h4 className="font-semibold text-2xl font-family-heading text-center">
+                Weekly
+              </h4>
+              {/* Price */}
+              <div className="flex flex-row justify-center items-center">
+                <div className="text-3xl flex flex-row justify-center">
+                  <p className="align-super text-sm font-family-body font-bold">
+                    KES
+                  </p>
+                  <p className="text-4xl font-family-body font-semibold">
+                    {" "}
+                    1000
+                  </p>
+                </div>
+              </div>
+              {/* Features */}
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Access to equipments</p>
+                </div>
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Personalized sessions</p>
+                </div>
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body font-bold">Save KES 400/=</p>
+                </div>
+              </div>
+              {/* CTA */}
+              <div className="w-full flex flex-row gap-6 justify-between items-center">
+                <p className="underline">Learn More</p>
+                <button className="p-3 rounded-full text-white bg-black">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Monthly */}
+          <div className="bg-white p-8 gap-6 rounded-2xl w-full">
+            {/* Frequency */}
+            <div className="flex flex-col gap-4">
+              <h4 className="font-semibold text-2xl font-family-heading text-center">
+                Monthly
+              </h4>
+              {/* Price */}
+              <div className="flex flex-row justify-center items-center">
+                <div className="text-3xl flex flex-row justify-center">
+                  <p className="align-super text-sm font-family-body font-bold">
+                    KES
+                  </p>
+                  <p className="text-4xl font-family-body font-semibold">
+                    {" "}
+                    3000
+                  </p>
+                </div>
+              </div>
+              {/* Features */}
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Access to equipments</p>
+                </div>
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body ">Personalized sessions</p>
+                </div>
+                <div className="flex flex-row gap-2 items-center text-gray-300">
+                  <BiCheck className="h-6 w-6" />
+                  <p className="font-family-body font-bold text-left">
+                    Inclusive of Aerobics & Zumba Lessons
+                  </p>
+                </div>
+              </div>
+              {/* CTA */}
+              <div className="w-full flex flex-row gap-6 justify-between items-center">
+                <p className="underline">Learn More</p>
+                <button className="p-3 rounded-full text-white bg-black">
+                  Contact Us
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-center mt-10 w-full">
+          <Link to="/membership">
+            <button className="cursor-pointer font-family-heading px-5 py-4 bg-primary-75 rounded-full w-80 font-medium text-lg">
+              View All Memberships
+            </button>
+          </Link>
+        </div>
+      </div>
+
+      {/* Testimonials */}
+      <div className="flex flex-col gap-9 bg-white pb-12 text-center h-130 px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
+        <SectionHeader
+          heading="What Our Members Say"
+          subheading="Don’t just take our word for it. Hear from our satisfied members about Giant Golem Fitness."
+        />
+        {/* Reviews Card Section */}
+        <TestimonialsCarousel />
+
+        <div className="flex flex-row gap-2 justify-end">
+          <p>Did you like our services? </p>
+          <a
+            href="https://www.google.com/search?sca_esv=6b9acc621195338b&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E_c4GTT96msPUowJJP5AtFXFLri3-ohwAle6As4J1nSPzSkJyCeDnO93K_BlwliWhFWGqkRkfkJZrt1dSfjZ3InhydW1NThfXERUED-iKtpMyAmmbJIWXXQl3HenhilGu3Wb6ts%3D&q=GIANT+GOLEM+STRENGTH+%26+FITNESS+CENTRE+Reviews&sa=X&ved=2ahUKEwiW54el1byPAxXPUkEAHcMAHcgQ0bkNegQIOxAD&biw=1366&bih=615#"
+            target="_blank"
+            className="underline pl-1"
+          >
+            Write Us A Review
+          </a>
+          <PenBoxIcon />
+        </div>
+      </div>
+
+      {/* Contact Section */}
+      <Contact />
     </div>
   );
 }
