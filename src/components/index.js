@@ -3,7 +3,7 @@ import Header from "./Header";
 import Navbar from "./Navbar";
 import SectionHeader from "./SectionHeader";
 import TestimonialsCarousel from "./TestimonialsCarousel";
-import { ContactForm, Contact, ContactModal } from "./contact";
+import { ContactForm, ContactSection, ContactModal } from "./contact";
 
 export {
   Header,
@@ -11,7 +11,7 @@ export {
   Navbar,
   SectionHeader,
   TestimonialsCarousel,
-  Contact,
+  ContactSection,
   ContactForm,
   ContactModal,
 };
