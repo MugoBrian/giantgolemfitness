@@ -1,5 +1,5 @@
-import Contact from "./Contact";
+import ContactSection from "./ContactSection";
 import ContactModal from "./ContactModal";
 import ContactForm from "./ContactForm";
 
-export { Contact, ContactForm, ContactModal };
+export { ContactSection, ContactForm, ContactModal };

@@ -14,7 +14,7 @@ import KarateImage from "../assets/images/Karate.png";
 import ZumbaImage from "../assets/images/Zumba.png";
 import { PiBarbell } from "react-icons/pi";
 import { BiCheck } from "react-icons/bi";
-import { SectionHeader, TestimonialsCarousel, Contact } from "../components";
+import { SectionHeader, TestimonialsCarousel, ContactSection } from "../components";
 import { PenBoxIcon } from "lucide-react";
 function Home() {
   const { setImage, setDescription, setTitle } = useHeader();
@@ -291,7 +291,7 @@ function Home() {
       </div>
 
       {/* Membership Section */}
-      <div className="flex-col gap-6 bg-gray-400 pb-12 text-center pt- px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
+      <div className="flex-col gap-6 bg-gray-100 pb-12 text-center pt- px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
         {/* Title & Subtitle Section */}
         <SectionHeader
           heading="Membership"
@@ -469,7 +469,7 @@ function Home() {
       </div>
 
       {/* Contact Section */}
-      <Contact />
+      <ContactSection />
     </div>
   );
 }
