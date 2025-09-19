@@ -26,7 +26,8 @@
   --color-gray-400: #e3e3e3;
   --color-gray-500: #757575;
   --color-black: #282826;
-  --color-black-light: rgb(0, 0, 0, 14%);
+  --color-black-light: rgb(0, 0, 0, 20%);
 
   --shadow-primary: 0px 16px 24px 2px var(--color-black-light);
+  --shadow-secondary: 0 8px 10px 0 var(--color-black-light);
 }

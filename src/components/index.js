@@ -3,6 +3,15 @@ import Header from "./Header";
 import Navbar from "./Navbar";
 import SectionHeader from "./SectionHeader";
 import TestimonialsCarousel from "./TestimonialsCarousel";
-import Contact from "./Contact";
+import { ContactForm, ContactSection, ContactModal } from "./contact";
 
-export { Header, Footer, Navbar, SectionHeader, TestimonialsCarousel, Contact };
+export {
+  Header,
+  Footer,
+  Navbar,
+  SectionHeader,
+  TestimonialsCarousel,
+  ContactSection,
+  ContactForm,
+  ContactModal,
+};
