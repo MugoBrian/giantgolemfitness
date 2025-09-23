@@ -14,7 +14,7 @@ import { useForm } from "react-hook-form";
 
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Send} from "lucide-react";
+import { Loader, Send } from "lucide-react";
 import { useState } from "react";
 
 const contactFormSchema = z.object({
@@ -105,7 +105,7 @@ function ContactForm() {
                 <Input
                   placeholder="John Doe"
                   {...field}
-                  className="px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-500 ease-in-out border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
+                  className="px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-300 ease-in-out border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
                 />
               </FormControl>
               {errors.username && (
@@ -126,7 +126,7 @@ function ContactForm() {
                 <Input
                   placeholder="johndoe@gmail.com"
                   {...field}
-                  className="px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-500 ease-in-out  border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
+                  className="px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-300 ease-in-out  border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
                 />
               </FormControl>
               {errors.email && (
@@ -145,7 +145,7 @@ function ContactForm() {
                 <Textarea
                   placeholder="Be as descriptive as you can ..."
                   {...field}
-                  className="h-32 px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-500 ease-in-out border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
+                  className="h-32 px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-300 ease-in-out border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
                 />
               </FormControl>
               {errors.message && (
@@ -163,7 +163,7 @@ function ContactForm() {
             disabled={!isValid}
             className="text-base cursor-pointer px-5 py-3 w-2/3 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting ? <Loader /> : "Send Message"}
             <Send className="h-4.5 w-4.5" />
           </Button>
         </div>
