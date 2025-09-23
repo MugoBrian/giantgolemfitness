@@ -1,0 +1,79 @@
+[
+  {
+    "frequency": "Daily",
+    "price": "200",
+    "features": [
+      "Access to equipments",
+      "Popular with new members",
+      "Personalized sessions"
+    ],
+    "bold": false,
+    "type": "individual",
+    "save": "0"
+  },
+  {
+    "frequency": "Weekly",
+    "price": "1000",
+    "features": [
+      "Access to equipments",
+      "Personalized sessions",
+      "Save KES 400 vs Daily Rate"
+    ],
+    "type": "individual",
+    "bold": "Save KES 400",
+    "save": "KES 1,400 (if daily)"
+  },
+  {
+    "frequency": "Monthly",
+    "price": "3000",
+    "features": [
+      "Access to equipments",
+      "Best for committed members",
+      "Personalized sessions",
+      "Save KES 1000 vs Weekly Rate"
+    ],
+    "type": "individual",
+    "bold": "Save KES 1000",
+    "save": "KES 4,000 (if weekly)"
+  },
+  {
+    "frequency": "Quartely",
+    "price": "7500",
+    "features": [
+      "Access to equipments",
+      "Personalized sessions",
+      "Best for long term goals",
+      "Save KES 1500 vs Monthly Indivual Rate"
+    ],
+    "type": "individual",
+    "bold": "Save KES 1500",
+    "save": "KES 9,000 (if monthly)"
+  },
+  {
+    "frequency": "Monthly",
+    "price": "2500",
+    "features": [
+      "Access to equipments",
+      "Personalized sessions",
+      "Inclusive of Aerobics & Zumba Lessons",
+      "Train with your spouse, friend or training buddy",
+      "Save KES 500 each month vs Monthly Individual Rate"
+    ],
+    "type": "couple",
+    "bold": "Save KES 500",
+    "save": "KES 3,000 (if individually)"
+  },
+  {
+    "frequency": "Quartely",
+    "price": "7500",
+    "features": [
+      "Access to equipments",
+      "Popular with new members",
+      "Personalized sessions",
+      "Save KES 500 each month vs Monthly Individual Rate"
+    ],
+    "type": "couple",
+    "bold": "Save KES 500",
+    "save": "KES 9,000 (if individually monthly)"
+  }
+]
