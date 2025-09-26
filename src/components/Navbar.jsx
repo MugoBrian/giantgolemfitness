@@ -20,8 +20,8 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Check if scroll position is beyond 50 pixels
-      const isScrolled = window.scrollY > 100;
+      // Check if scroll position is beyond 120 pixels
+      const isScrolled = window.scrollY > 120;
       if (isScrolled !== scrolled) {
         setScrolled(isScrolled);
       }
@@ -43,7 +43,7 @@ function Navbar() {
   const navbarClasses = `
     fixed top-0 h-34 left-0 w-full z-50
     transition-colors duration-600 ease-in-out
-    ${scrolled ? "bg-white-50" : "bg-transparent"}
+    ${scrolled ? "bg-white-100/40" : "bg-transparent"}
   `;
 
   return (
