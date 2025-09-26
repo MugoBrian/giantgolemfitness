@@ -49,8 +49,8 @@ function MembershipCard({ frequency, price, features, bold, save }) {
       </CardDescription>
       <CardContent className="flex flex-col gap-3  pl-0 h-2/3">
         <div className="flex flex-col gap-3 justify-center h-full">
-          {features.map((feature) => (
-            <div className="flex gap-2">
+          {features.map((feature, index) => (
+            <div key={index} className="flex gap-2">
               <BiCheck className="h-6 w-6 text-green-500" />
               <p
                 className={`font-family-body ${

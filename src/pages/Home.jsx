@@ -275,7 +275,7 @@ function Home() {
       </div>
 
       {/* Membership Section */}
-      <div className="flex-col gap-6 bg-gray-400 pb-12 text-center pt-4 px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
+      <div className="flex-col gap-6 bg-gray-400 pb-12 text-center  px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
         {/* Title & Subtitle Section - UNCHANGED */}
         <SectionHeader
           heading="Membership"
@@ -315,7 +315,7 @@ function Home() {
         {/* Reviews Card Section */}
         <TestimonialsCarousel />
 
-        <div className="flex flex-row gap-2 justify-end">
+        <div className="flex gap-1 sm:flex justify-end sm:gap-2">
           <p>Did you like our services? </p>
           <a
             href="https://www.google.com/search?sca_esv=6b9acc621195338b&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E_c4GTT96msPUowJJP5AtFXFLri3-ohwAle6As4J1nSPzSkJyCeDnO93K_BlwliWhFWGqkRkfkJZrt1dSfjZ3InhydW1NThfXERUED-iKtpMyAmmbJIWXXQl3HenhilGu3Wb6ts%3D&q=GIANT+GOLEM+STRENGTH+%26+FITNESS+CENTRE+Reviews&sa=X&ved=2ahUKEwiW54el1byPAxXPUkEAHcMAHcgQ0bkNegQIOxAD&biw=1366&bih=615#"
