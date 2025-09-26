@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import SectionHeader from "./SectionHeader";
 import TestimonialsCarousel from "./TestimonialsCarousel";
 import { ContactForm, ContactSection, ContactModal } from "./contact";
+import { MembershipCard, MemebershipSectionHeader } from "./membership";
 
 export {
   Header,
@@ -14,4 +15,6 @@ export {
   ContactSection,
   ContactForm,
   ContactModal,
+  MembershipCard,
+  MemebershipSectionHeader,
 };
