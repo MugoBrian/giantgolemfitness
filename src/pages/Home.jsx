@@ -13,7 +13,6 @@ import ProgramImage from "../assets/images/Image.png";
 import KarateImage from "../assets/images/Karate.png";
 import ZumbaImage from "../assets/images/Zumba.png";
 import { PiBarbell } from "react-icons/pi";
-import { BiCheck } from "react-icons/bi";
 import {
   SectionHeader,
   TestimonialsCarousel,
@@ -23,7 +22,7 @@ import { PenBoxIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
-import MembershipCard from "../components/MembershipCard";
+import { MembershipCard } from "../components";
 import membershipData from "../lib/data/memberships.json";
 
 function Home() {
@@ -55,7 +54,7 @@ function Home() {
         </div>
         {/* CTA */}
         <div className="flex gap-6 sm:gap-12 md:gap-16 ">
-          <Button className="font-medium text-white rounded-full px-3 py-3 sm:px-8 sm:py-6 cursor-pointer">
+          <Button className="font-medium text-md text-white rounded-full px-3 py-3 sm:px-8 sm:py-6 cursor-pointer">
             {" "}
             Start Your Journey
           </Button>
