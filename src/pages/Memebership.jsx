@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import MembershipHero from "../assets/images/MembershipHero.png";
-import { useHeader } from "../context/useHeaderContext";
-import { MembershipCard, MemebershipSectionHeader } from "../components";
-import HomeHero from "../assets/images/HomeHero.png";
 
-import membershipData from "../lib/data/memberships.json";
+import { MembershipCard, MemebershipSectionHeader } from "../components";
 import { PaymentSection } from "../components/membership";
 
+import membershipData from "../lib/data/memberships.json";
+
+import { useHeader } from "../context/useHeaderContext";
 function Memebership() {
   const { setTitle, setDescription, setImage } = useHeader();
   const title = "Membership";
@@ -17,6 +17,11 @@ function Memebership() {
     setTitle(title);
     setDescription(description);
     setImage(MembershipHero);
+
+    return () => {
+      setTitle("");
+      setDescription("");
+    };
   }, [setImage, setTitle, setDescription]);
   return (
     <div className="flex-col gap-6 bg-white-50 pt-14 pb-12 text-center px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
