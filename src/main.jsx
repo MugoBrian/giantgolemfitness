@@ -14,14 +14,19 @@ import Contact from "./pages/Contact.jsx";
 
 // import Layout from "./Layout.jsx";
 import App from "./App.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import NotFoundPage from "./pages/NotFoundPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
-    <Route path="programs" element={<Programs />} />
+      <Route path="programs" element={<Programs />} />
       <Route path="membership" element={<Memebership />} />
+      <Route path="gallery" element={<Gallery />} />
+
       <Route path="contact" element={<Contact />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Route>
   )
 );

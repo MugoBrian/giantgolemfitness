@@ -2,6 +2,8 @@ import Logo from "../assets/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Mail, Phone, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 import FooterLogo from "../assets/images/FooterLogo.png";
 
 function Navbar() {
@@ -86,7 +88,7 @@ function Navbar() {
 
         {/* Mobile Navbar - IMPROVED WITH ACCESSIBILITY */}
         <div className="md:hidden">
-          <button
+          <Button
             onClick={() => setIsOpen((isOpen) => !isOpen)}
             className="flex items-center justify-center bg-white p-2.5 rounded-md shadow hover:shadow-md cursor-pointer hover:bg-white transition-all duration-200 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-75 focus:ring-offset-2"
             aria-label={
@@ -116,7 +118,7 @@ function Navbar() {
                 }`}
               />
             </div>
-          </button>
+          </Button>
         </div>
 
         {/* Overlay with improved accessibility */}
@@ -141,7 +143,7 @@ function Navbar() {
           aria-label="Mobile navigation"
           role="navigation"
         >
-          {/* Header with improved close button */}
+          {/* Header with improved close Button */}
           <div className="bg-white-100 px-6 py-4 text-gray-700">
             <div className="flex items-center justify-between">
               <div>
@@ -153,7 +155,7 @@ function Navbar() {
                 />
               </div>
 
-              <button
+              <Button
                 onClick={() => setIsOpen(false)}
                 className="bg-gray-300/85 text-white backdrop-blur-sm hover:bg-black focus:bg-white/30 rounded-lg p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
                 aria-label="Close navigation menu"
@@ -161,7 +163,7 @@ function Navbar() {
               >
                 <X className="w-6 h-6" />
                 <span className="sr-only">Close Menu</span>
-              </button>
+              </Button>
             </div>
           </div>
 
