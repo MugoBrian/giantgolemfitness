@@ -1,13 +1,6 @@
+import { LocateIcon, Mail, MapPin, Smartphone } from "lucide-react";
 import FooterLogo from "../assets/images/FooterLogo.png";
-import {
-  BsEnvelope,
-  BsFacebook,
-  BsInstagram,
-  BsPhone,
-  BsTiktok,
-  BsWhatsapp,
-} from "react-icons/bs";
-import { FaLocationDot } from "react-icons/fa6";
+import { BsFacebook, BsInstagram, BsTiktok, BsWhatsapp } from "react-icons/bs";
 import { Link } from "react-router-dom";
 function Footer() {
   const year = new Date().getFullYear();
@@ -20,24 +13,23 @@ function Footer() {
             Contact
           </h5>
           <div className="flex flex-col gap-3 sm:gap-4 font-family-body items-center sm:items-baseline">
-            <div className="flex gap-2">
-              <BsPhone className="w-5 h-5" />
+            <div className="flex gap-2 md:gap-3">
+              <Smartphone className="w-5 h-5" />
               <a href="tel:+254793 965 155">
-                <span className="hover:font-bold">+254793 965 155 </span>
+                <span className="hover:font-bold">+254 793 965 155 </span>
               </a>
             </div>
-            <div className="flex gap-2 md:gap-3 wrap-break-word">
-              <BsEnvelope className="w-5 h-5" />
+            <div className="flex gap-2 md:gap-3 ">
+              <Mail className="w-5 h-5" />
               <a href="mailto:giantgolemstrength@gmail.com">
-                <span className="break-all hover:font-bold">
-                  {" "}
+                <span className="hover:font-bold">
                   giantgolemstrength@gmail.com
                 </span>
               </a>
             </div>
             <div className="flex gap-2 md:gap-3">
               <div className="">
-                <FaLocationDot className="w-5 h-5 stroke-black stroke-40 text-transparent" />
+                <MapPin className="w-5 h-5" />
               </div>
               <a href=" https://www.google.com/maps/place/GIANT+GOLEM+STRENGTH+%26+FITNESS+CENTRE/@-1.1356285,36.9776726,774m/data=!3m2!1e3!4b1!4m6!3m5!1s0x182f47e77eaaf001:0xf08680bd72ddf3a1!8m2!3d-1.1356285!4d36.9776726!16s%2Fg%2F11rck5n_w8?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D">
                 <span className="hover:font-bold">

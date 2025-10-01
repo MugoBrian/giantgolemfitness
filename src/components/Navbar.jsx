@@ -9,8 +9,8 @@ import FooterLogo from "../assets/images/FooterLogo.png";
 function Navbar() {
   const navItems = [
     "Home",
-    "Programs",
     "Membership",
+    "Programs",
     "Shop",
     "Gallery",
     "Contact",

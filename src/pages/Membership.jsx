@@ -7,7 +7,7 @@ import { PaymentSection } from "../components/membership";
 import membershipData from "../lib/data/memberships.json";
 
 import { useHeader } from "../context/useHeaderContext";
-function Memebership() {
+function Membership() {
   const { setTitle, setDescription, setImage } = useHeader();
   const title = "Membership";
   const description =
@@ -54,4 +54,4 @@ function Memebership() {
   );
 }
 
-export default Memebership;
+export default Membership;
