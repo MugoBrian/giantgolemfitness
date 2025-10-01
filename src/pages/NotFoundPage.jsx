@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Home, ArrowLeft, Dumbbell } from "lucide-react";
+import {
+  ArrowLeft,
+  Dumbbell,
+  DumbbellIcon,
+  Images,
+  Smartphone,
+  Users,
+} from "lucide-react";
 
-function NotFoundPage() {
+function NotFound() {
   return (
     <div className="min-h-screen pt-8 bg-white-50 flex items-center justify-center px-4">
       <div className="max-w-2xl w-full text-center">
@@ -28,11 +35,11 @@ function NotFoundPage() {
         </p>
 
         {/* Action Buttons */}
-        <div className="flex gap-4 justify-center mb-12">
+        <div className="flex gap-4 justify-center mb-0">
           <Link to="/">
             <Button
               size="lg"
-              className="bg-primary-75 hover:bg-orange-600 text-white px-8 py-6 rounded-full font-semibold flex items-center justify-center gap-2"
+              className="bg-primary-75 hover:bg-primary text-white cursor-pointer px-8 py-6 rounded-full font-semibold flex items-center justify-center gap-2"
             >
               <ArrowLeft className="w-5 h-5" />
               Back to Home
@@ -51,8 +58,8 @@ function NotFoundPage() {
               to="/programs"
               className="p-4 rounded-lg border border-gray-200 hover:border-primary-75 hover:bg-orange-50 transition-all group"
             >
-              <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                💪
+              <div className="flex justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                <DumbbellIcon />
               </div>
               <p className="text-sm font-medium text-gray-700">Programs</p>
             </Link>
@@ -61,8 +68,8 @@ function NotFoundPage() {
               to="/membership"
               className="p-4 rounded-lg border border-gray-200 hover:border-primary-75 hover:bg-orange-50 transition-all group"
             >
-              <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                🎯
+              <div className="flex justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                <Users />
               </div>
               <p className="text-sm font-medium text-gray-700">Membership</p>
             </Link>
@@ -71,8 +78,8 @@ function NotFoundPage() {
               to="/gallery"
               className="p-4 rounded-lg border border-gray-200 hover:border-primary-75 hover:bg-orange-50 transition-all group"
             >
-              <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                📸
+              <div className="flex justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                <Images />
               </div>
               <p className="text-sm font-medium text-gray-700">Gallery</p>
             </Link>
@@ -81,8 +88,8 @@ function NotFoundPage() {
               to="/contact"
               className="p-4 rounded-lg border border-gray-200 hover:border-primary-75 hover:bg-orange-50 transition-all group"
             >
-              <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
-                📞
+              <div className="flex justify-center text-2xl mb-2 group-hover:scale-110 transition-transform">
+                <Smartphone />
               </div>
               <p className="text-sm font-medium text-gray-700">Contact</p>
             </Link>
@@ -98,4 +105,4 @@ function NotFoundPage() {
   );
 }
 
-export default NotFoundPage;
+export default NotFound;
