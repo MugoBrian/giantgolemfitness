@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Clock, Users } from "lucide-react";
 import ProgramsHero from "../assets/images/ProgramsHero.png";
 
+import programsData from "../lib/data/programs.json";
+
 function Programs() {
   const { setTitle, setDescription, setImage } = useHeader();
   const title = "Our Programs";
@@ -16,79 +18,14 @@ function Programs() {
     setImage(ProgramsHero);
   }, [setImage, setTitle, setDescription]);
 
-  const programs = [
-    {
-      id: 1,
-      title: "BODY BUILDING",
-      description:
-        "Structured training focused on muscle growth and strength development.",
-      image: "/api/placeholder/400/300",
-      duration: "3 Days",
-      participants: "Individual",
-      price: null,
-      availableForMembership: true,
-    },
-    {
-      id: 2,
-      title: "FAT WEIGHT LOSS",
-      description:
-        "Focused training aimed to help clients achieve their weight-loss goals.",
-      image: "/api/placeholder/400/300",
-      duration: "5 Days",
-      participants: "Individual",
-      price: null,
-      availableForMembership: true,
-    },
-    {
-      id: 3,
-      title: "POWERLIFTING",
-      description: "Focused body lifting that build muscular strength.",
-      image: "/api/placeholder/400/300",
-      duration: "3 Days",
-      participants: "Individual",
-      price: 700,
-      availableForMembership: false,
-    },
-    {
-      id: 4,
-      title: "CARDIO",
-      description:
-        "High-intensity cardio sessions that aid clients with endurance.",
-      image: "/api/placeholder/400/300",
-      duration: "6 Days",
-      participants: "Individual",
-      price: null,
-      availableForMembership: true,
-    },
-    {
-      id: 5,
-      title: "STRENGTH TRAINING",
-      description: "Build overall strength and muscle endurance.",
-      image: "/api/placeholder/400/300",
-      duration: "4 Days",
-      participants: "Individual",
-      price: 500,
-      availableForMembership: false,
-    },
-    {
-      id: 6,
-      title: "FLEXIBILITY",
-      description: "Improve range of motion and prevent injuries.",
-      image: "/api/placeholder/400/300",
-      duration: "2 Days",
-      participants: "Individual",
-      price: null,
-      availableForMembership: true,
-    },
-  ];
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
       {/* Programs Grid */}
       <p className="text-sm md:text-base text-gray-700 pb-4 md:pb-6">
         Browse our available fitness programs
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols- gap-4 md:gap-6">
-        {programs.map((program) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+        {programsData.map((program) => (
           <div
             key={program.id}
             className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
@@ -100,10 +37,10 @@ function Programs() {
                 alt={program.title}
                 className="w-full h-full object-cover"
               />
-              {program.availableForMembership && (
+              {program.availableForprogrmas && (
                 <div className="absolute top-2 sm:top-3 left-2 sm:left-3 right-2 sm:right-3">
                   <span className="inline-block bg-green-500 text-white text-xs font-semibold px-3 sm:px-4 py-1 sm:py-1.5 rounded-full shadow-md">
-                    ✓ Available for Membership
+                    ✓ Available for programs
                   </span>
                 </div>
               )}
@@ -143,7 +80,7 @@ function Programs() {
                 ) : (
                   <div className="h-7 flex items-center">
                     <span className="text-sm text-gray-500">
-                      Included in membership
+                      Included in progrmas
                     </span>
                   </div>
                 )}

@@ -1,0 +1,87 @@
+[
+  {
+    "id": 1,
+    "title": "BODY BUILDING",
+    "description": "Structured training focused on muscle growth and strength development.",
+    "image": "/api/placeholder/400/300",
+    "duration": "3 Days",
+    "participants": "Individual",
+    "price": null,
+    "availableInMembership": true
+  },
+
+  {
+    "id": 2,
+    "title": "KARATE",
+    "description": "Structured training focused on muscle growth and strength development.",
+    "image": "/api/placeholder/400/300",
+    "duration": "3 Days",
+    "participants": "Individual",
+    "price": null,
+    "availableInMembership": true
+  },
+  {
+    "id": 3,
+    "title": "POWERLIFTING",
+    "description": "Focused body lifting that build muscular strength.",
+    "image": "/api/placeholder/400/300",
+    "duration": "3 Days",
+    "participants": "Individual",
+    "price": 700,
+    "availableInMembership": false
+  },
+
+  {
+    "id": 4,
+    "title": "FAT WEIGHT LOSS",
+    "description": "Focused training aimed to help clients achieve their weight-loss goals.",
+    "image": "/api/placeholder/400/300",
+    "duration": "5 Days",
+    "participants": "Individual",
+    "price": null,
+    "availableInMembership": true
+  },
+
+  {
+    "id": 5,
+    "title": "AEROBICS",
+    "description": "Improve range of motion and prevent injuries.",
+    "image": "/api/placeholder/400/300",
+    "duration": "2 Days",
+    "participants": "Individual",
+    "price": null,
+    "availableInMembership": true
+  },
+  {
+    "id": 6,
+    "title": "ZUMBA",
+    "description": "Improve range of motion and prevent injuries.",
+    "image": "/api/placeholder/400/300",
+    "duration": "2 Days",
+    "participants": "Individual",
+    "price": null,
+    "availableInMembership": true
+  },
+
+  {
+    "id": 7,
+    "title": "YOGA",
+    "description": "Build overall strength and muscle endurance.",
+    "image": "/api/placeholder/400/300",
+    "duration": "4 Days",
+    "participants": "Individual",
+    "price": 500,
+    "availableInMembership": false
+  },
+  {
+    "id": 8,
+    "title": "BOXING",
+    "description": "Focused body lifting that build muscular strength.",
+    "image": "/api/placeholder/400/300",
+    "duration": "4 Days",
+    "participants": "Individual",
+    "price": 500,
+    "availableInMembership": false,
+    "comingsoon": true
+  }
+]

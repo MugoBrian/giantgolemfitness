@@ -157,7 +157,7 @@ function Navbar() {
 
               <Button
                 onClick={() => setIsOpen(false)}
-                className="bg-gray-300/85 text-white backdrop-blur-sm hover:bg-black focus:bg-white/30 rounded-lg p-2 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="bg-gray-300/85 text-white backdrop-blur-sm hover:bg-black focus:ring-offset-2 rounded-lg p-1.5 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-black"
                 aria-label="Close navigation menu"
                 autoFocus={isOpen}
               >
@@ -175,10 +175,10 @@ function Navbar() {
                   <NavLink
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                     className={({ isActive }) =>
-                      `group flex items-center px-4 py-3 rounded-md font-family-body text-base transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-75 focus:ring-offset-2 focus:ring-offset-white ${
+                      `group flex items-center px-4 py-3 rounded-md font-family-body text-base transition-all duration-200 focus:outline-none focus:ring-2 outline:ring-primary-75 focus:ring-offset-2 focus:ring-offset-white ${
                         isActive
                           ? "bg-primary-75 text-gray-700 font-semibold shadow"
-                          : "text-gray-700 hover:bg-gray-50 hover:text-black hover:font-semibold focus:bg-gray-50 focus:text-primary-75 font-medium"
+                          : "text-gray-700 hover:bg-gray-50 hover:text-black hover:font-semibold focus-visible:bg-gray-50 font-medium"
                       }`
                     }
                     onClick={() => setIsOpen(false)}

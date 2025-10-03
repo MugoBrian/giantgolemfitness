@@ -9,7 +9,7 @@ import {
 } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import SportsHeartIcon from "../assets/images/sport-heart-icon.svg";
-import ProgramImage from "../assets/images/Image.png";
+import BodybuildingImage from "../assets/images/Bodybuilding.png";
 import KarateImage from "../assets/images/Karate.png";
 import ZumbaImage from "../assets/images/Zumba.png";
 import { PiBarbell } from "react-icons/pi";
@@ -183,7 +183,7 @@ function Home() {
           <div className="rounded-xl flex flex-col shadow-primary w-full lg:flex-1 h-full">
             {/* Image */}
             <img
-              src={ProgramImage}
+              src={BodybuildingImage}
               alt="A martial arts master on his knees"
               className="h-full w-full"
             />
