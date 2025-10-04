@@ -1,17 +1,17 @@
 import { Clock, Mail, MapPin, PhoneIcon } from "lucide-react";
 import ContactForm from "./ContactForm";
 
-function ContactSection({ bgColor = "bg-gray-100" }) {
+function ContactSection({ bgColor = "bg-gray-100", className }) {
   return (
     <div
-      className={`grid grid-cols-1 sm:grid sm:grid-cols-2 pt-12 gap-14 ${bgColor} pb-12 px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30`}
+      className={`grid grid-cols-1 sm:grid sm:grid-cols-2 pt-8 gap-14 ${bgColor} pb-12 ${className}`}
     >
       <div className="flex flex-col gap-8 w-full">
         <div className="flex flex-col gap-4 w-full">
-          <p className="font-family-heading font-bold text-3xl pt-2.5">
+          <p className="font-family-heading font-bold text-xl md:text-3xl pt-2.5">
             Contact Us
           </p>
-          <p className="font-family-body text-base">
+          <p className="font-family-body text-md">
             Have questions about our gym or membership options? Reach out to us
             and we’ll get back to you as soon as possible.
           </p>
@@ -19,7 +19,7 @@ function ContactSection({ bgColor = "bg-gray-100" }) {
         {/* Contact Details */}
         <div className="flex flex-col gap-6">
           <div className="flex flex-row gap-2">
-            <div className="h-full bg-primary-75 p-1 flex flex-col justify-center rounded-3xl">
+            <div className="h-full bg-primary-50 p-1 flex flex-col justify-center rounded-3xl">
               <MapPin className="h-6 w-6" />
             </div>
             <div className="flex flex-col gap-1.5 justify-center">
@@ -28,7 +28,7 @@ function ContactSection({ bgColor = "bg-gray-100" }) {
             </div>
           </div>
           <div className="flex flex-row gap-2 ">
-            <div className=" bg-primary-75 p-1 flex flex-col justify-center rounded-3xl">
+            <div className=" bg-primary-50 p-1 flex flex-col justify-center rounded-3xl">
               <PhoneIcon className="h-6 w-6" />
             </div>
             <div className="flex flex-col gap-1.5 justify-center">
@@ -37,7 +37,7 @@ function ContactSection({ bgColor = "bg-gray-100" }) {
             </div>
           </div>
           <div className="flex flex-row gap-2 ">
-            <div className=" bg-primary-75 p-1 flex flex-col justify-center rounded-3xl">
+            <div className=" bg-primary-50 p-1 flex flex-col justify-center rounded-3xl">
               <Mail className="h-6 w-6" />
             </div>
             <div className="flex flex-col gap-1.5 justify-center">
@@ -46,7 +46,7 @@ function ContactSection({ bgColor = "bg-gray-100" }) {
             </div>
           </div>
           <div className="flex flex-row gap-2 ">
-            <div className=" bg-primary-75 p-1 flex flex-col justify-center rounded-3xl">
+            <div className=" bg-primary-50 p-1 flex flex-col justify-center rounded-3xl">
               <Clock className="h-6 w-6" />
             </div>
             <div className="flex flex-col gap-1.5 justify-center">

@@ -38,7 +38,7 @@ const contactFormSchema = z.object({
     }),
 });
 
-function ContactForm() {
+function ContactForm({ programName, onSuccess, subject }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState("");
   const form = useForm({
@@ -60,16 +60,19 @@ function ContactForm() {
   const onSubmit = async ({ username, email, message }) => {
     try {
       setIsSubmitting(true);
-      const formData = new FormData();
-      formData.append("access_key", "e296c7a1-0935-4645-b182-83422fd140e3");
-      formData.append("name", username);
-      formData.append("email", email);
-      formData.append("message", message);
-      formData.append("subject", "New Contact Form Message");
 
-      const response = await fetch("https://api.web3forms.com/submit", {
+      const response = await fetch("https://912efd89.giantgolemfitness.pages.dev/send-email", {
         method: "POST",
-        body: formData,
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: username,
+          email,
+          message,
+          subject: subject || `Interested in ${programName} Program`,
+          programName: programName,
+        }),
       });
 
       const result = await response.json();
@@ -77,12 +80,18 @@ function ContactForm() {
       if (result.success) {
         setSubmitStatus("Message sent successfully!");
         reset();
+
+        // Close dialog after success
+        setTimeout(() => {
+          if (onSuccess) onSuccess();
+        }, 1500);
+
       } else {
         console.log("result.error", result);
         setSubmitStatus("Failed to send message. Please try again.");
       }
     } catch (error) {
-      console.error("Error:", error);
+      console.error("Submit error:", error);
       setSubmitStatus("Failed to send message. Please try again.");
     } finally {
       setIsSubmitting(false);
@@ -143,7 +152,7 @@ function ContactForm() {
               <FormLabel className="text-base">Message</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Be as descriptive as you can ..."
+                  placeholder="Tell us about your fitness goals..."
                   {...field}
                   className="h-32 px-4 py-3 focus-visible:ring-primary-75 focus-visible:border-primary-75 transition-all duration-300 ease-in-out border-gray-200 aria-invalid:ring-red-800 aria-invalid:border-red-800  aria-invalid:text-red-800"
                 />
