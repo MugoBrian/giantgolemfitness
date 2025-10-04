@@ -39,7 +39,7 @@ export async function onRequestPost(context) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${env.RESEND_API_KEY}`,
+        Authorization: `Bearer ${env.VITE_RESEND_API_KEY}`,
       },
       // giantgolemstrength@gmail.com
       body: JSON.stringify({
