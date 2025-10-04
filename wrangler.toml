@@ -1,0 +1,18 @@
+name = "Giant Golem Fitness"
+compatibility_date = "2023-10-01"
+
+# Path to your static site build
+pages_build_output_dir = "./dist"
+
+[site]
+bucket = "./dist" # This is where your static files live after build
+
+# Enable Pages Functions for your Worker
+[[plugins]]
+name = "pages-functions"
+
+[build]
+command = "npm run build"
+
+[deploy]
+branch = "main"
