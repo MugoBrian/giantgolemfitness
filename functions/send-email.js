@@ -67,7 +67,7 @@ export async function onRequestPost(context) {
       }
     );
   } catch (error) {
-    console.error("Email error:", error);
+    console.error("Email error:", error, env);
     return new Response(
       JSON.stringify({
         success: false,
