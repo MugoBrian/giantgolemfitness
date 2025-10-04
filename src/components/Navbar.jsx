@@ -1,9 +1,9 @@
-import Logo from "../assets/logo.svg";
-import { Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Mail, Phone, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Mail, Phone, X } from "lucide-react";
 
+import Logo from "../assets/logo.svg";
 import FooterLogo from "../assets/images/FooterLogo.png";
 
 function Navbar() {
@@ -11,7 +11,7 @@ function Navbar() {
     "Home",
     "Membership",
     "Programs",
-    "Shop",
+    // "Shop",
     "Gallery",
     "Contact",
   ];
@@ -45,7 +45,7 @@ function Navbar() {
   const navbarClasses = `
     fixed top-0 h-34 left-0 w-full z-50
     transition-colors duration-600 ease-in-out
-    ${scrolled ? "bg-white-100/40" : "bg-transparent"}
+    ${scrolled ? "bg-white-100/75" : "bg-transparent"}
   `;
 
   return (
@@ -64,10 +64,8 @@ function Navbar() {
             />
           ) : (
             <img
-              className=""
+              className="w-[90px] h-[90px] lg:w-[150px] lg:h-[150px]"
               src={Logo}
-              width={150}
-              height={150}
               alt="Giant Golem Fitness Logo"
             />
           )}

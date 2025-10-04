@@ -3,85 +3,96 @@
     "id": 1,
     "title": "BODY BUILDING",
     "description": "Structured training focused on muscle growth and strength development.",
-    "image": "/api/placeholder/400/300",
-    "duration": "3 Days",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759404811/Bodybuilding_cckhvk.png",
+      "alt": "A man deep squating three and a quarter plates."
+    },
+    "date": "Monday - Saturday",
     "participants": "Individual",
     "price": null,
-    "availableInMembership": true
+    "duration": "60 - 90 min"
   },
 
   {
     "id": 2,
-    "title": "KARATE",
-    "description": "Structured training focused on muscle growth and strength development.",
-    "image": "/api/placeholder/400/300",
-    "duration": "3 Days",
+    "title": "ZUMBA",
+    "description": "Group fitness program that combines dance rhythms with high-energy cardio moves.",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759001736/475773082_637968772085863_5030982155857090621_n_m8w5ei.jpg",
+      "alt": ""
+    },
+    "date": "Tuesday 7:00 pm",
     "participants": "Individual",
-    "price": null,
-    "availableInMembership": true
-  },
-  {
-    "id": 3,
-    "title": "POWERLIFTING",
-    "description": "Focused body lifting that build muscular strength.",
-    "image": "/api/placeholder/400/300",
-    "duration": "3 Days",
-    "participants": "Individual",
-    "price": 700,
-    "availableInMembership": false
+    "price": "200",
+    "duration": "60 min"
   },
 
   {
+    "id": 3,
+    "title": "KARATE",
+    "description": "Structured training focused on muscle growth and strength development.",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759511313/Karate_pykpzj.png",
+      "alt": "A martial arts master on his knees."
+    },
+    "date": "Wednesday 7:00 pm & Saturday 2:00 pm",
+    "participants": "Individual",
+    "price": "200",
+    "duration": "60 min"
+  },
+  {
     "id": 4,
-    "title": "FAT WEIGHT LOSS",
-    "description": "Focused training aimed to help clients achieve their weight-loss goals.",
-    "image": "/api/placeholder/400/300",
-    "duration": "5 Days",
+    "title": "POWERLIFTING",
+    "description": "Focused body lifting that build muscular strength.",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759504570/Powerlifting_ruyuzr.jpg",
+      "alt": "A man doing a deadlift of 4 plates of 45 pounds on each side"
+    },
+    "date": "Monday - Saturday",
     "participants": "Individual",
     "price": null,
-    "availableInMembership": true
+    "duration": "60 - 90 min"
   },
 
   {
     "id": 5,
-    "title": "AEROBICS",
-    "description": "Improve range of motion and prevent injuries.",
-    "image": "/api/placeholder/400/300",
-    "duration": "2 Days",
+    "title": "FAT WEIGHT LOSS",
+    "description": "Focused training aimed to help clients achieve their weight-loss goals.",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759509805/unsplash_Fu7RNjl-pW0_1_hcaxsa.png",
+      "alt": "A woman measuring her waist with a tape measure."
+    },
+    "date": "Monday - Saturday",
     "participants": "Individual",
     "price": null,
-    "availableInMembership": true
+    "duration": "60 - 90 min"
   },
+
   {
     "id": 6,
-    "title": "ZUMBA",
+    "title": "AEROBICS",
     "description": "Improve range of motion and prevent injuries.",
-    "image": "/api/placeholder/400/300",
-    "duration": "2 Days",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759404788/Zumba_nmbexu.png",
+      "alt": "Two women doing excercise, raising one knee and both of their hands."
+    },
+    "date": "Wednesday 6:00 pm",
     "participants": "Individual",
-    "price": null,
-    "availableInMembership": true
+    "price": "200",
+    "duration": "60 min"
   },
 
   {
     "id": 7,
     "title": "YOGA",
     "description": "Build overall strength and muscle endurance.",
-    "image": "/api/placeholder/400/300",
-    "duration": "4 Days",
+    "image": {
+      "url": "https://res.cloudinary.com/djgmknbtt/image/upload/v1759405640/WhatsApp_Image_2025-10-02_at_14.36.03_n8fbsz.jpg",
+      "alt": ""
+    },
+    "date": "Saturday 12:00 noon",
     "participants": "Individual",
-    "price": 500,
-    "availableInMembership": false
-  },
-  {
-    "id": 8,
-    "title": "BOXING",
-    "description": "Focused body lifting that build muscular strength.",
-    "image": "/api/placeholder/400/300",
-    "duration": "4 Days",
-    "participants": "Individual",
-    "price": 500,
-    "availableInMembership": false,
-    "comingsoon": true
+    "price": "200",
+    "duration": "60 min"
   }
 ]

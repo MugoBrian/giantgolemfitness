@@ -84,8 +84,8 @@ export default function TestimonialsCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext className="hidden md:flex" />
+      <CarouselPrevious className="cursor-pointer" />
+      <CarouselNext className="hidden md:flex cursor-pointer" />
     </Carousel>
   );
 }
