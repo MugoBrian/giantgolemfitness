@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <div className="bg-primary-50 pt-4 pb-3 flex flex-col gap-5 w-full lg:px-28 md:px-6 xl:px-32 2xl:px-30 bottom-0 px-4 items-center text-center sm:text-left">
+    <div className="bg-primary-50 pt-4 pb-3 flex flex-col gap-5 w-full px-4 md:px-6 lg:px-28  xl:px-32 2xl:px-30 bottom-0 items-center text-center sm:text-left">
       <div className="flex flex-col sm:flex-row-reverse gap-6 md:gap-20">
         {/* Contact */}
         <div className="flex flex-col gap-3">
