@@ -49,7 +49,7 @@ export async function onRequestPost(context) {
         html: generateEmailHTML(name, email, phone, message, program),
       }),
     });
-    console.log(`Bearer ${import.meta.env.VITE_RESEND_API_KEY}`)
+    console.log(`Bearer ${env.VITE_RESEND_API_KEY}`)
     const resendData = await resendResponse.json();
 
     if (!resendResponse.ok) {
