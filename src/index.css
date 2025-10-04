@@ -16,6 +16,10 @@
   --color-primary-50: rgb(250, 136, 4, 50%);
   --color-primary-25: rgb(254, 146, 6, 25%);
 
+  /* fd8a0f */
+
+  --bg-red-100: #f54217;
+
   --color-white: #fff;
   --color-white-50: #f5f5f5;
   --color-white-100: #e3e3e3;
@@ -30,4 +34,90 @@
 
   --shadow-primary: 0px 16px 24px 2px var(--color-black-light);
   --shadow-secondary: 0 8px 10px 0 var(--color-black-light);
+}
+
+[role="dialog"] {
+  max-width: 28rem;
+}
+
+[role="dialog"] input:focus,
+[role="dialog"] textarea:focus {
+  outline: 2px solid var(--primary-75);
+  outline-offset: 2px;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+@media (min-width: 640px) {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: red;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: red;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: red;
+}
+
+/* Dialog entrance animation */
+.custom-dialog {
+  animation: dialogFadeIn 0.2s ease-out;
+}
+
+@keyframes dialogFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Smooth scroll */
+.custom-scrollbar {
+  scroll-behavior: smooth;
+}
+
+/* Mobile optimization */
+@media (max-width: 639px) {
+  .custom-dialog {
+    margin: 0;
+    border-radius: 12px;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .custom-dialog {
+    animation: none;
+  }
+  .custom-scrollbar {
+    scroll-behavior: auto;
+  }
+}
+
+/* Touch-friendly scrolling on mobile */
+.custom-scrollbar {
+  -webkit-overflow-scrolling: touch;
 }

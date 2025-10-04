@@ -15,6 +15,7 @@ import {
   Gallery,
   Contact,
   NotFound,
+  Shop,
 } from "./pages/index.js";
 
 import App from "./App.jsx";
@@ -26,6 +27,7 @@ const router = createBrowserRouter(
       <Route path="programs" element={<Programs />} />
       <Route path="membership" element={<Membership />} />
       <Route path="gallery" element={<Gallery />} />
+      {/* <Route path="shop" element={<Shop />} /> */}
 
       <Route path="contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} />

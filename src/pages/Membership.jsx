@@ -24,7 +24,7 @@ function Membership() {
     };
   }, [setImage, setTitle, setDescription]);
   return (
-    <div className="flex-col gap-6 bg-white-50 pt-14 pb-12 text-center px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
+    <div className="flex-col gap-6 bg-white-50 pt-8 pb-12 text-center px-4 lg:px-28 sm:px-3 md:px-6 xl:px-32 2xl:px-30">
       <div className="flex flex-col gap-10">
         <div className="flex flex-col gap-8">
           <MemebershipSectionHeader heading="INDIVIDUAL" />

@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import ShopComingSoon from "../components/ComingSoon";
 
 function Shop() {
   return (
-    <div>Shop</div>
-  )
+    <div>
+      <ShopComingSoon />
+    </div>
+  );
 }
 
-export default Shop
+export default Shop;

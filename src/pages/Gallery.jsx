@@ -7,7 +7,7 @@ import { TAG, CLOUD_NAME } from "../lib/config/cloudinaryConfig";
 
 import { useHeader } from "../context/useHeaderContext";
 import { Button } from "../components/ui/button";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react";
 
 function Gallery() {
   const [images, setImages] = useState([]);
@@ -35,11 +35,11 @@ function Gallery() {
     const fetchImages = async () => {
       setLoading(true);
       try {
-        const response = await axios.get(
+        const { data } = await axios.get(
           `https://res.cloudinary.com/${CLOUD_NAME}/image/list/${TAG}.json`
         );
-        setImages(response.data.resources);
-        setImageCount(response.data.resources.length);
+        setImages(data.resources);
+        setImageCount(data.resources.length);
         setLoading(false);
       } catch (error) {
         setError("We experienced some trouble while getting your images.");
@@ -150,22 +150,21 @@ function Gallery() {
   }
 
   return (
-    <div className="min-h-screen bg-white-50">
+    <div className="bg-white-50 w-full">
       {/* Header Section */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <h1 className="text-xl md:text-lg font-bold text-gray-900 mb-2">
-            Enjoy our photos
-          </h1>
-          <p className="text-gray-600 text-base">
-            <span className="font-bold pr-1">{imageCount}</span>
-            {imageCount === 1 ? "photo" : "photos"} from our gym community
-          </p>
-        </div>
+
+      <div className="py-3">
+        <h1 className="text-xl md:text-lg font-bold text-gray-900 mb-2">
+          Enjoy our photos
+        </h1>
+        <p className="text-gray-600 text-base">
+          <span className="font-bold pr-1">{imageCount}</span>
+          {imageCount === 1 ? "photo" : "photos"} from our gym community
+        </p>
       </div>
 
       {/* Masonry Gallery */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="py-4">
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
           {images.map(({ public_id }, index) => {
             const myImage = cld.image(public_id).format("auto").quality("auto");
@@ -185,19 +184,7 @@ function Gallery() {
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <svg
-                        className="w-12 h-12 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
-                        />
-                      </svg>
+                      <ZoomIn className="w-12 h-12 text-white" />
                     </div>
                   </div>
                 </div>
@@ -270,7 +257,7 @@ function Gallery() {
                 .image(selectedImage.public_id)
                 .format("auto")
                 .quality("auto")}
-              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+              className="max-w-full max-h-[90vh] scale:105 object-cover rounded-lg"
               alt={`Gallery image ${selectedImage.index + 1}`}
             />
           </div>
