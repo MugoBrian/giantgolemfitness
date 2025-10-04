@@ -1,4 +1,4 @@
-function generateEmailHTML(name, email, phone, message, program) {
+export default function generateEmailHTML(name, email, phone, message, program) {
   return `
 <!DOCTYPE html>
 <html>

@@ -1,4 +1,4 @@
-import { generateEmailHTML } from "./email-template.js";
+import generateEmailHTML from "./email-template.js";
 
 export async function onRequestPost(context) {
   const { request, env } = context;

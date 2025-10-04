@@ -61,7 +61,7 @@ function ContactForm({ programName, onSuccess, subject }) {
     try {
       setIsSubmitting(true);
 
-      const response = await fetch("https://912efd89.giantgolemfitness.pages.dev/send-email", {
+      const response = await fetch("https://giantgolemfitness.pages.dev/send-email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
