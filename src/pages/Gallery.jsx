@@ -150,7 +150,7 @@ function Gallery() {
   }
 
   return (
-    <div className="bg-white-50 w-full">
+    <div className="bg-white-50 w-full px-4 md:px-6 lg:px-28  xl:px-32 2xl:px-30">
       {/* Header Section */}
 
       <div className="py-3">
